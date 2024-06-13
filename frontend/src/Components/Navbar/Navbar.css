@@ -17,6 +17,13 @@ header {
     gap: 3rem;
 }
 
+.nav-items hr {
+    border: none;
+    width: 80%;
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
 .menu-items ul li a {
     text-decoration: none;
     color: var(--color-black);
@@ -43,33 +50,51 @@ header {
     margin-bottom: -20px;
 }
 
-.close {
-    display: none;
-}
-
-.cart {
-    margin-right: 3rem;
+.login-cart {
+    margin-right: 40px;
+    display: flex;
+    gap: 45px;
     position: relative;
 }
 
-.cart span {
+.login-cart button {
+    background: #00a6ff;
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 75px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+.login-cart button:hover {
+    background: var(--color-white);
+    color: var(--secondary-color);
+    border: 2px solid #00a6ff;
+}
+
+.login-cart span {
     background: #00d4ff;
     padding: 1px 3px;
     border-radius: 10px;
     color: black;
     position: absolute;
-    top: -25px;
+    top: -22px;
     right: 3px;
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-.cart .cart-icon {
+.login-cart .cart-icon {
+    margin-top: 5px;
     width: 30px;
     height: 30px;
     color: black;
 }
 
-.cart .cart-icon:hover {
+.login-cart .cart-icon:hover {
     color: var(--secondary-color);
 }
+
