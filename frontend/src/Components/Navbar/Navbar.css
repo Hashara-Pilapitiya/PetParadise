@@ -43,6 +43,28 @@ header {
     letter-spacing: 1px;
 }
 
+/* .dropdown-menu{
+    display: none;
+}
+
+.menu-items ul li a:hover .dropdown-menu{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color:black;
+}
+
+.menu-items ul li a:hover .dropdown-menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.menu-items ul li a:hover .dropdown-menu ul li{
+    width: 180px;
+    padding: 10px;
+} */
+
 .logo img {
     width: 150px;
     height: 150px;
