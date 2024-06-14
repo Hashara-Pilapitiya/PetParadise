@@ -1,0 +1,74 @@
+.sign-up{
+    height: 300px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #edeff7;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+
+}
+
+.sign-up .newstext{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
+.sign-up .newstext h4{
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+.sign-up .newstext p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #65907d;
+}
+
+.sign-up .newstext p span{
+    color: #2764ff;
+}
+
+.sign-up .form{
+    display: flex;
+    width: 40%;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.sign-up .form input{
+    color: black;
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #00a6ff;
+    border-radius: 30px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: var(--color-white);
+}
+
+.sign-up .form .btn{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 18px;
+    border: none;
+    padding: 10px 15px;
+    background:  #00a6ff;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.sign-up .form .btn a{
+    text-decoration: none;
+    color: var(--color-white);
+}
