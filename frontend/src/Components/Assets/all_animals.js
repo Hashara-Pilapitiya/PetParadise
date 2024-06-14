@@ -372,3 +372,5 @@ let all_animals = [
     
 
     ];
+
+    export default all_animals;

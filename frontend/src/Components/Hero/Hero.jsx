@@ -4,7 +4,7 @@ import HeroImage from '../Assets/hero.png';
 
 const Hero = () => {
   return (
-    <>
+    < div className='hero'>
 
         <div className='main'>
 
@@ -23,7 +23,7 @@ const Hero = () => {
 
         </div>
 
-    </>
+    </div>
   )
 }
 

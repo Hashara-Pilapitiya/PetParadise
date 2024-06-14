@@ -1,0 +1,18 @@
+.popular {
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.popular h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.popular-animals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 60px;
+}
