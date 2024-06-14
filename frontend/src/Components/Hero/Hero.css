@@ -1,0 +1,41 @@
+.main {
+    margin-top: -10px;
+    margin-left: 120px;
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.main_left {
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_left h1 {
+    margin-top: -10px;
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--color-white);
+    letter-spacing: 1px;
+}
+
+.main_left_title p {
+    color: #1486c0;
+    font-style: italic;
+}
+
+.main_left_content p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+.main_right img {
+    width: 650px;
+    height: 650px;
+}
