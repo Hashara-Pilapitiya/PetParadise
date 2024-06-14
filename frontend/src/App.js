@@ -7,6 +7,13 @@ import Animal from './Pages/Animal/Animal';
 import Cart from './Pages/Cart/Cart';
 import LoginSignup from './Pages/LoginSignup/LoginSignup';
 import Footer from './Components/Footer/Footer';
+import dog_banner from './Components/Assets/dogbanner.jpg';
+import cat_banner from './Components/Assets/catbanner.jpeg';
+import fish_banner from './Components/Assets/fishbanner.jpg';
+import bird_banner from './Components/Assets/birdbanner.jpg';
+import mammal_banner from './Components/Assets/mammalsbanner.jpg';
+import reptile_banner from './Components/Assets/reptiliabanner.jpg';
+
 
 function App() {
   return (
