@@ -8,7 +8,7 @@ import Cart from './Pages/Cart/Cart';
 import LoginSignup from './Pages/LoginSignup/LoginSignup';
 import Footer from './Components/Footer/Footer';
 import dog_banner from './Components/Assets/dogbanner.jpg';
-import cat_banner from './Components/Assets/catbanner.jpeg';
+import cat_banner from './Components/Assets/catbanner.jpg';
 import fish_banner from './Components/Assets/fishbanner.jpg';
 import bird_banner from './Components/Assets/birdbanner.jpg';
 import mammal_banner from './Components/Assets/mammalsbanner.jpg';
@@ -26,12 +26,12 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Shop />} />
-          <Route path="/dogs" element={<ShopCategory category='dogs' />} />
-          <Route path="/cats" element={<ShopCategory category='cats' />} />
-          <Route path="/fish" element={<ShopCategory category='fish' />} />
-          <Route path="/birds" element={<ShopCategory category='birds' />} />
-          <Route path="/mammals" element={<ShopCategory category='mammals' />} />
-          <Route path="/reptilia" element={<ShopCategory category='reptilia' />} /> 
+          <Route path="/dogs" element={<ShopCategory banner={dog_banner} category='Dogs' />} />
+          <Route path="/cats" element={<ShopCategory banner={cat_banner} category='Cats' />} />
+          <Route path="/fish" element={<ShopCategory banner={fish_banner} category='Fish' />} />
+          <Route path="/birds" element={<ShopCategory banner={bird_banner} category='Birds' />} />
+          <Route path="/mammals" element={<ShopCategory banner={mammal_banner} category='Small Mammals' />} />
+          <Route path="/reptilia" element={<ShopCategory banner={reptile_banner} category='Reptiles' />} /> 
           <Route path='/animal' element={<Animal /> } >
             <Route path=':animalId' element={<Animal />} />
           </Route>
