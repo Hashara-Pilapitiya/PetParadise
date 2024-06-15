@@ -1,10 +1,13 @@
 import React from 'react';
 import './AnimalDisplay.css';
 import { FaStar } from "react-icons/fa";
+import { ShopContext } from '../../Context/ShopContext';
 
 const AnimalDisplay = (props) => {
 
     const { animal } = props;
+
+    const { addToCart } = React.useContext(ShopContext);
 
   return (
 
@@ -33,7 +36,7 @@ const AnimalDisplay = (props) => {
             </div>
 
             <div className="addtocart">
-                <button>Add to Cart</button>
+                <button onClick={() => {addToCart(animal.id)}}>Add to Cart</button>
             </div>
 
         </div>
