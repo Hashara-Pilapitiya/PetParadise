@@ -1,6 +1,6 @@
 .hero {
     background: rgb(0,6,36);
-    background: linear-gradient(90deg, rgba(0,6,36,1) 0%, rgba(5,112,182,1) 0%, rgba(0,212,255,1) 100%, rgba(2,172,226,1) 100%, rgba(6,97,171,1) 100%, rgba(9,30,121,1) 100%);;
+    background: linear-gradient(90deg, rgba(0,6,36,1) 0%, rgba(6,97,171,1) 0%, rgba(0,212,255,1) 100%, rgba(5,166,182,1) 100%, rgba(9,30,121,1) 100%, rgba(2,172,226,1) 100%);
 }
 
 .main {
