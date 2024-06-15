@@ -7,7 +7,9 @@ const ShopCategory = (props) => {
   const {all_animals} = React.useContext(ShopContext);
 
   return (
-    <div className='shop-catrgory'></div>
+    <div className='shop-catrgory'>
+      hghhhghhh
+    </div>
   )
 }
 

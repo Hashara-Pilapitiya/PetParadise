@@ -65,6 +65,32 @@ header {
     padding: 10px;
 } */
 
+
+.dropdown-menu ul {
+    display: grid;
+    position: absolute;
+}
+
+.dropdown-menu ul li {
+    font-weight: 600;
+    margin-bottom: -47px;
+    width: 120px;
+    padding: 10px;
+    background: skyblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.dropdown-menu ul li:hover {
+    background: #0661ab;
+    color: var(--color-white);
+}
+
+.dropdown-menu ul li a:hover {
+    color: var(--color-black);
+}
+
 .logo img {
     width: 150px;
     height: 150px;
