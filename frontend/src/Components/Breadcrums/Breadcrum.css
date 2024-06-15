@@ -1,0 +1,12 @@
+.breadcrum {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.breadcrum span {
+    padding-top: 3px;
+}
