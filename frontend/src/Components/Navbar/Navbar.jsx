@@ -10,8 +10,6 @@ const Navbar = () => {
 
     const [menu, setMenu] = useState('shop');
 
-    const DropDown = ['Dogs', 'Cats', 'Fish', 'Birds', 'Mammals', 'Reptilia']
-
     const menuRef = React.useRef();
     const imgRef = React.useRef();
 
