@@ -6,7 +6,7 @@ const AnimalCard = (props) => {
   return (
 
     <div className='animals'>
-        <Link to={`/animal/${props.id}`}><img src={props.image} alt='' /></Link>
+        <Link to={`/animal/${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} alt='' /></Link>
         <h3>{props.name}</h3>
 
         <div className='animal-info'>

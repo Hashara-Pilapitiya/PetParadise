@@ -7,42 +7,42 @@ import Reptilia1 from '../Assets/reptilia1.jpg';
 
 let data_animal = [
     {
-        id: 1,
+        id: 3,
         name: "German Shepherd",
         image: Dog3,
         price: 60.0,
         age: 4,
       },
       {
-        id: 2,
+        id: 21,
         name: "Persian",
         image: Cat5,
         price: 85.0,
         age: 3,
       },
       {
-        id: 3,
+        id: 27,
         name: "Goldfish",
         image: Fish1,
         price: 85.0,
         age: 3,
       },
       {
-        id: 4,
+        id: 31,
         name: "Parakeets",
         image: Bird1,
         price: 85.0,
         age: 3,
       },
       {
-        id: 5,
+        id: 34,
         name: "Guinea Pigs",
         image: Mammal2,
         price: 85.0,
         age: 3,
       },
       {
-        id: 6,
+        id: 39,
         name: "Turtles",
         image: Reptilia1,
         price: 85.0,
