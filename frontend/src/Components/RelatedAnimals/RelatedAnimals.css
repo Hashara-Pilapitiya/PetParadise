@@ -1,0 +1,17 @@
+.relatedanimals {
+    margin-top: 40px;
+}
+
+.relatedanimals h1 {
+    font-size: 2rem;
+}
+
+.relatedanimas-1 {
+    margin-top: 40px;
+    margin-right:  200px;
+    margin-left: 180px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+

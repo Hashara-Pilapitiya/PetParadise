@@ -3,6 +3,7 @@ import { ShopContext } from '../../Context/ShopContext';
 import { useParams } from 'react-router-dom';
 import Breadcrum from '../../Components/Breadcrums/Breadcrum';
 import AnimalDisplay from '../../Components/AnimalDisplay/AnimalDisplay';
+import RelatedAnimals from '../../Components/RelatedAnimals/RelatedAnimals';
 
 const Animal = () => {
 
@@ -19,6 +20,9 @@ const Animal = () => {
       <Breadcrum animal={animal} />
 
       <AnimalDisplay animal={animal} />
+
+      <RelatedAnimals />
+
 
     </div>
 
