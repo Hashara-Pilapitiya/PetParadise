@@ -42,6 +42,7 @@
 
 @media(max-width: 500px) {
     .animals {
+        margin-left: 70px;
         width: 300px;
         padding: 20px ;
     }
