@@ -72,3 +72,20 @@
     font-size: 16px;
     font-weight: 500;
 }
+
+
+
+
+
+@media(max-width: 1024px) {
+    .loginsignup {
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 500px) {
+    .loginsignup {
+        margin-top: 70px;
+        margin-left: 60px;
+    }
+}
