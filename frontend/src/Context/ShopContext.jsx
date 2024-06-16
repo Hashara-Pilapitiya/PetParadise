@@ -27,7 +27,33 @@ const ShopContextProvider = (props) => {
         setCart((prev) => ({...prev, [animalID]: prev[animalID] - 1}));
     }
 
-    const contextValue = {all_animals, cart, addToCart, removeFromCart};
+    const getTotalCartAmount = () => {
+        let total = 0;
+
+        for (const animalID in cart) {
+            const animal = all_animals.find((animal) => animal.id === parseInt(animalID));
+
+            if (animal) {
+                total += animal.price * cart[animalID];
+            }
+        }
+
+        return total;
+
+    }
+
+    const getTotalCartItems = () => {
+        let total = 0;
+
+        for (const animalID in cart) {
+            total += cart[animalID];
+        }
+
+        return total;
+    }
+    
+
+    const contextValue = {getTotalCartItems, getTotalCartAmount, all_animals, cart, addToCart, removeFromCart};
 
 
     return (

@@ -3,12 +3,15 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import Logo from '../Assets/logo.png';
+import { ShopContext } from '../../Context/ShopContext';
 
 const Navbar = () => {
 
     const [open, setOpen] = useState(false);
 
     const [menu, setMenu] = useState('shop');
+
+    const {getTotalCartItems} = React.useContext(ShopContext);
 
     const menuRef = React.useRef();
     const imgRef = React.useRef();
@@ -67,7 +70,7 @@ const Navbar = () => {
 
             <div className='login-cart'>
                 <Link to='/login'><button>Login</button></Link>
-                <span>0</span>
+                <span>{getTotalCartItems()}</span>
                 <Link to='/cart'><FaShoppingCart className='cart-icon' /></Link>
 
 

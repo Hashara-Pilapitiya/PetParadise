@@ -290,7 +290,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 32,
+        id: 33,
         name: "Finches",
         category: "Birds",
         image: Bird3,
@@ -298,7 +298,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 32,
+        id: 34,
         name: "Parrots",
         category: "Birds",
         image: Bird4,
@@ -306,7 +306,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 32,
+        id: 35,
         name: "Cockatiels",
         category: "Birds",
         image: Bird5,
@@ -314,7 +314,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 33,
+        id: 36,
         name: "Hamsters",
         category: "Small Mammals",
         image: Mammal1,
@@ -322,7 +322,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 34,
+        id: 37,
         name: "Guinea Pigs",
         category: "Small Mammals",
         image: Mammal2,
@@ -330,7 +330,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 35,
+        id: 38,
         name: "Rabbits",
         category: "Small Mammals",
         image: Mammal3,
@@ -338,7 +338,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 36,
+        id: 39,
         name: "Ferrets",
         category: "Small Mammals",
         image: Mammal4,
@@ -346,7 +346,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 37,
+        id: 40,
         name: "Gerbils",
         category: "Small Mammals",
         image: Mammal5,
@@ -354,7 +354,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 39,
+        id: 41,
         name: "Turtles",
         category: "Reptiles",
         image: Reptilia1,
@@ -362,7 +362,7 @@ let all_animals = [
         age: 3,
       },
       {
-        id: 40,
+        id: 42,
         name: "Tortoises",
         category: "Reptiles",
         image: Reptilia2,
