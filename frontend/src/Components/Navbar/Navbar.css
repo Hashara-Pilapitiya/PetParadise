@@ -129,7 +129,11 @@ header {
 
 
 
-
+@media(min-width: 1280px) {
+    .menu .nav-dropdown {
+        display: none;
+    } 
+}
 
 @media(max-width: 1280px) {
     .header {
