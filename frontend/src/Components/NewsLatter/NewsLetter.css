@@ -72,3 +72,106 @@
     text-decoration: none;
     color: var(--color-white);
 }
+
+
+
+
+
+@media(max-width: 1024px) {
+    .sign-up{
+        display: block;
+        height: 350px;
+    }
+
+    .sign-up .newstext h4{
+        padding-top: 60px;
+        font-size: 30px;
+    }
+
+    .sign-up .newstext p{
+        font-size: 20px;
+    }
+
+    .sign-up .form{
+        margin-top: 60px;
+        margin-left: 250px;
+        width: 50%;
+    }
+
+    .sign-up .form input{
+        height: 3.5rem;
+        font-size: 14px;
+    }
+
+    .sign-up .form .btn{
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .sign-up{
+        display: block;
+        height: 330px;
+    }
+
+    .sign-up .newstext h4{
+        padding-top: 60px;
+        font-size: 25px;
+    }
+
+    .sign-up .newstext p{
+        font-size: 20px;
+    }
+
+    .sign-up .form{
+        margin-top: 60px;
+        margin-left: 150px;
+        width: 60%;
+    }
+
+    .sign-up .form input{
+        height: 3.5rem;
+        font-size: 14px;
+    }
+
+    .sign-up .form .btn{
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+}
+
+
+@media(max-width: 500px) {
+    .sign-up{
+        width: 700px;
+        display: block;
+        height: 370px;
+    }
+
+    .sign-up .newstext h4{
+        padding-top: 60px;
+        font-size: 25px;
+    }
+
+    .sign-up .newstext p{
+        font-size: 20px;
+    }
+
+    .sign-up .form{
+        margin-top: 60px;
+        margin-left: 130px;
+        width: 60%;
+    }
+
+    .sign-up .form input{
+        height: 3.5rem;
+        font-size: 14px;
+    }
+
+    .sign-up .form .btn{
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+}
