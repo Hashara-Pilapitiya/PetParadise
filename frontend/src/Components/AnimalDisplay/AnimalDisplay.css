@@ -55,3 +55,16 @@
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
 }
+
+
+
+
+
+
+
+@media(max-width: 1024px) {
+    .animaldisplay {
+        margin-left: 120px;
+        margin-right: 100px;
+    }
+}
