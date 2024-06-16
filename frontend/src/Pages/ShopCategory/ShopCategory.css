@@ -35,3 +35,78 @@
     border: 3px solid rgba(0,212,255,1);
     color: black
 }
+
+
+
+
+
+@media(max-width: 1024px) {
+    .banner-img img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .shop-category-title {
+        margin-top: -10px;
+        margin-bottom: -30px;
+    }
+
+    .shopcategory-animals {
+        display: grid;
+        margin-left: 130px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .banner-img img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .shopcategory-animals {
+        display: grid;
+        margin-left: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .shopcategory-loadmore {
+        margin-top: 20px;
+    }
+}
+
+
+@media(max-width: 500px) {
+    .banner-img img {
+        width: 700px;
+        height: 300px;
+    }
+
+    .shop-category-title {
+        padding-left: 240px;
+    }
+
+    .shop-category-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .shopcategory-animals {
+        display: grid;
+        margin-left: 120px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .shopcategory-loadmore {
+        margin-top: 20px;
+        margin-left: 250px;
+    }
+
+    .shopcategory-loadmore button {
+        padding: 15px 20px;
+        font-size: 1.4rem;
+    }
+}
