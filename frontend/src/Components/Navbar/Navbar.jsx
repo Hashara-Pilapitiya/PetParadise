@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import Logo from '../Assets/logo.png';
 import { ShopContext } from '../../Context/ShopContext';
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 const Navbar = () => {
 
@@ -31,6 +32,9 @@ const Navbar = () => {
                 <Link to='/'><img src={Logo} alt='logo'/></Link>
             </div>
 
+            <span className='nav-dropdown'><IoIosArrowDropdownCircle ref={menuRef} onClick={() => setOpen(!open)} /></span>
+
+
             <div className='menu-items'>
                 {/* <ul>
                     <li onClick={() => {setMenu('shop')}}><Link to='/'>Shop{menu === 'shop' ? <hr /> : <></>}</Link></li>
@@ -43,7 +47,9 @@ const Navbar = () => {
 
                 </ul>  */}
 
-                <ul>
+                <ul ref={menuRef}>
+
+
                 <li onClick={() => {setMenu('shop')}}><Link to='/'>Shop{menu === 'shop' ? <hr /> : <></>}</Link></li>
                 <li className='categories' onClick={() => setOpen(!open)}style={{fontWeight: 600, fontSize: 18, cursor: 'pointer'}} ref={imgRef}>Categories
                 { open && <div className='dropdown-menu' ref={menuRef}>
@@ -65,6 +71,8 @@ const Navbar = () => {
                 <li onClick={() => {setMenu('about')}}><Link to='/about'>About{menu === 'about' ? <hr /> : <></>}</Link></li>
                 <li onClick={() => {setMenu('contact')}}><Link to='/contact'>Contact{menu === 'contact' ? <hr /> : <></>}</Link></li>
                 </ul>
+
+                
                    
             </div>
 

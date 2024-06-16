@@ -43,28 +43,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* .dropdown-menu{
-    display: none;
-}
-
-.menu-items ul li a:hover .dropdown-menu{
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color:black;
-}
-
-.menu-items ul li a:hover .dropdown-menu ul{
-    display: block;
-    margin: 10px;
-}
-
-.menu-items ul li a:hover .dropdown-menu ul li{
-    width: 180px;
-    padding: 10px;
-} */
-
 
 .dropdown-menu ul {
     display: grid;
@@ -146,3 +124,111 @@ header {
     color: var(--secondary-color);
 }
 
+
+
+
+
+
+
+
+@media(max-width: 1280px) {
+    .header {
+        padding: 12px 50px;
+        margin-bottom: 20px;
+    }
+
+    .menu img {
+        margin-left: 40px;
+        width: 180px;
+    }
+
+    .menu-items ul {
+        gap: 2rem;
+    }
+
+    .menu .nav-dropdown {
+        display: none;
+    }
+
+    .menu-items .dropdown-menu li {
+        width: 400px;
+    }
+}
+
+
+@media(max-width: 1024px) {
+    .header {
+        margin-left: -130px ;
+    }
+
+    .menu-items {
+        margin-left: 40px;
+    }
+
+    .menu-items ul {
+        gap: 1.5rem;
+    }
+    
+    .menu .nav-dropdown {
+        display: none;
+    }
+
+    .menu-items .dropdown-menu li {
+        width: 100px;
+        margin-bottom: -22px;
+    }
+
+    .login-cart {
+        margin-left: 60px;
+    }
+}
+
+
+@media(max-width: 800px){
+    .menu .nav-dropdown {
+        display: none;
+    }
+}
+
+
+
+
+@media(max-width: 500px) {
+    .header {
+        margin-top: -25px;
+        margin-bottom: 50px;
+    }
+    .header .menu {
+        display: flex;
+        gap: 120px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .menu img  {
+        width: 140px;
+    }
+
+    .menu .nav-dropdown {
+        margin-left: 30px;
+        display: block;
+        font-size: 40px;
+        rotate: -90deg;
+        transition: 0.5s;
+    }
+
+    .menu-items {
+        display: flex;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        justify-content: center;
+        top: 100px;
+        margin-left: 135px;
+    }
+
+    .login-cart {
+        margin-left: 40px;
+    }
+}
