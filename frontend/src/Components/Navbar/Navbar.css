@@ -185,6 +185,15 @@ header {
 
 
 @media(max-width: 800px){
+    .menu img  {
+        width: 140px;
+        margin-left: 55px;
+    }
+
+    .login-cart  {
+        margin-left: 50px;
+    }
+
     .menu .nav-dropdown {
         display: none;
     }
