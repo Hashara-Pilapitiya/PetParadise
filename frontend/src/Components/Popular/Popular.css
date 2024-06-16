@@ -16,3 +16,36 @@
     margin-top: 20px;
     gap: 60px;
 }
+
+
+
+
+
+
+@media(max-width: 1024px) {
+    .popular h1 {
+        margin-top: -30px;
+    }
+}
+
+@media(max-width: 768px) {
+    .popular h1 {
+        font-size: 40px;
+    }
+
+    .popular-animals {
+        gap: 25px;
+    }
+}
+
+@media(max-width: 500px) {
+    .popular h1 {
+        margin-left: 190px;
+        font-size: 30px;
+    }
+
+    .popular-animals {
+        margin-left: 200px;
+        gap: 25px;
+    }
+}

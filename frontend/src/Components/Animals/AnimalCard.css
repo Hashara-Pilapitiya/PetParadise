@@ -36,3 +36,30 @@
 .animals p {
     margin: 6px 0px;
 }
+
+
+
+
+@media(max-width: 500px) {
+    .animals {
+        width: 300px;
+        padding: 20px ;
+    }
+
+    .animals img {
+        width: 250px;
+        height: 200px;
+    }
+
+    .animals h3 {
+        font-size: 1.2rem;
+    }
+
+    .animal-info {
+        margin: 0 10px;
+    }
+
+    .animals p {
+        font-size: 0.9rem;
+    }
+}
