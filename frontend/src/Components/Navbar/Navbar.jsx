@@ -45,9 +45,9 @@ const Navbar = () => {
                     <li onClick={() => {setMenu('mammals')}}><Link to='/mammals'>Small Mammals{menu === 'mammals' ? <hr /> : <></>}</Link></li>
                     <li onClick={() => {setMenu('reptilia')}}><Link to='/reptilia'>Reptilia{menu === 'reptilia' ? <hr /> : <></>}</Link></li>
 
-                </ul>  */}
+                </ul>   */}
 
-                <ul ref={menuRef}>
+                <ul>
 
 
                 <li onClick={() => {setMenu('shop')}}><Link to='/'>Shop{menu === 'shop' ? <hr /> : <></>}</Link></li>
@@ -60,14 +60,10 @@ const Navbar = () => {
                     <li onClick={() => {setMenu('birds')}}><Link to='/birds'>Birds{menu === 'birds' ? <hr /> : <></>}</Link></li>
                     <li onClick={() => {setMenu('mammals')}}><Link to='/mammals'>Mammals{menu === 'mammals' ? <hr /> : <></>}</Link></li>
                     <li onClick={() => {setMenu('reptilia')}}><Link to='/reptilia'>Reptilia{menu === 'reptilia' ? <hr /> : <></>}</Link></li> 
-                    {/* {DropDown.map((drop) => {
-                        return (
-                            <li onClick={() => setOpen(false)} key={drop}>{drop}</li>
-                        )
-                    })} */}
-                    </ul>
-                </div> }
-                </li>
+                
+                    </ul> 
+                </div> } 
+                </li> 
                 <li onClick={() => {setMenu('about')}}><Link to='/about'>About{menu === 'about' ? <hr /> : <></>}</Link></li>
                 <li onClick={() => {setMenu('contact')}}><Link to='/contact'>Contact{menu === 'contact' ? <hr /> : <></>}</Link></li>
                 </ul>

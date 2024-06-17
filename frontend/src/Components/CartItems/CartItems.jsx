@@ -21,7 +21,7 @@ const CartItems = () => {
 
         <hr />
 
-        {all_animals.map((e) => {
+        {all_animals && all_animals.map((e) => {
 
             if(cart[e.id] > 0) {
                 return (

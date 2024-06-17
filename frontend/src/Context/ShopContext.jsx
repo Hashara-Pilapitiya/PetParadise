@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import all_animals from '../Components/Assets/all_animals';
+import React, {useEffect, useState} from 'react';
 
 export const ShopContext = React.createContext(null);
 
 const getDefaultCart = () => {
     let cart = {};
 
-    for (let index = 0; index < all_animals.length + 1; index++) {
+    for (let index = 0; index < 300 + 1; index++) {
         cart[index] = 0;
     }
 
@@ -16,7 +15,18 @@ const getDefaultCart = () => {
 
 const ShopContextProvider = (props) => {
 
+    const [all_animals, setAll_Animals] = useState([]);
+
     const [cart, setCart] = useState(getDefaultCart());
+
+    useEffect(() => {
+        fetch('http://localhost:4000/allanimals')
+        .then((res) => res.json())
+        .then((data) => setAll_Animals(data));
+
+        
+    }, []);
+
 
     const addToCart = (animalID) => {
         setCart((prev) => ({...prev, [animalID]: prev[animalID] + 1}));
@@ -53,7 +63,7 @@ const ShopContextProvider = (props) => {
     }
     
 
-    const contextValue = {getTotalCartItems, getTotalCartAmount, all_animals, cart, addToCart, removeFromCart};
+    const contextValue = {getTotalCartItems, getTotalCartAmount, cart, addToCart, removeFromCart};
 
 
     return (
