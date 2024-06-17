@@ -86,12 +86,12 @@ const AddAnimal = () => {
         <div className="addanimal-itemfield">
             <p>Animal Category</p>
             <select value={animalDetails.category} onChange={changeHandler} name='category' className='add-animal-selector'>
-                <option value='mammal'>Mammals</option>
-                <option value='bird'>Birds</option>
-                <option value='reptile'>Reptiles</option>
-                <option value='dog'>Dogs</option>
-                <option value='fish'>Fishes</option>
-                <option value='cat'>Cats</option>
+                <option value='Mammals'>Mammals</option>
+                <option value='Birds'>Birds</option>
+                <option value='Reptiles'>Reptiles</option>
+                <option value='Dogs'>Dogs</option>
+                <option value='Fishes'>Fishes</option>
+                <option value='Cats'>Cats</option>
             </select>
         </div>
 

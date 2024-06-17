@@ -1,0 +1,111 @@
+.animallist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 10px 50px;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
+
+.animallist h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.listanimal-format-main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 15px
+}
+
+.listanimal-format {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 100px;
+    width: 100%;
+    padding: 10px 0;
+    color: black;
+    font-weight: 500;
+    font-size: 15px
+}
+
+.listanimal-allanimals {
+    overflow-y: auto;
+}
+
+.listanimal-animal-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.listanimal-format .category {
+    margin-left: -10px;
+}
+
+.listanimal-format .name {
+    margin-left: -20px;
+}
+
+.listanimal-format .age {
+    margin-left: -20px;
+}
+
+.listanimal-format .price {
+    margin-left: -40px;
+}
+
+.listanimal-remove-icon {
+    margin-left: -20px;
+}
+
+
+
+
+@media(max-width: 800px) {
+    .animallist {
+        box-sizing: border-box;
+        width: 95%;
+        padding: 10px 30px;
+        height: 100%;
+        margin: 20px auto;
+    }
+
+    .listanimal-format {
+        padding: 15px 0;
+        font-size: 13px;
+    }
+
+    .listanimal-animal-icon {
+        width: 120px;
+        height: 90px;
+    }
+
+    .listanimal-format .category {
+        margin-left: -80px;
+    }
+
+    .listanimal-format .name {
+        margin-left: -90px;
+    }
+
+    .listanimal-format .age {
+        margin-left: -90px;
+    }
+
+    .listanimal-format .price {
+        margin-left: -90px;
+    }
+
+    .listanimal-remove-icon {
+        margin-left: -60px;
+    }
+}
