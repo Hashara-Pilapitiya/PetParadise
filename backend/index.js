@@ -167,6 +167,124 @@ app.post('/removeanimal', async (req, res) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+// Schema for creating Users
+const Users = mongoose.model('Users', {
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  cartData: {
+    type: Object
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+
+// Create a new user
+
+app.post('/register', async (req, res) => {
+  let checkUser = await Users.findOne({ email: req.body.email });
+
+  if (checkUser) {
+    return res.status(400).json({
+      success: false,
+      message: 'User already exists'
+    });
+  } 
+
+  let cart = {};
+
+  for(let i = 0; i < 300; i++) {
+    cart[i] = 0;
+  }
+
+  const user = new Users({
+    name: req.body.username,
+    email: req.body.email,
+    password: req.body.password,
+    cartData: cart
+  });
+
+  await user.save();
+
+  const data = {
+    user: {
+      id: user.id
+    }
+  };
+
+  const token = jwt.sign(data, 'secret_petparadise');
+
+  res.json({
+    success: true,
+    token: token
+  });
+
+});
+
+
+
+
+// Login user
+app.post('/login', async (req, res) => {
+  let user = await Users.findOne({ email: req.body.email });
+
+  if (user) {
+    const passCompare = req.body.password === user.password;
+
+    if (passCompare) {
+      const data = {
+        user: {
+          id: user.id
+        }
+      };
+
+      const token = jwt.sign(data, 'secret_petparadise');
+
+      res.json({
+        success: true,
+        token: token
+      });
+
+    } else {
+      res.status(400).json({
+        success: false,
+        message: 'Invalid credentials'
+      });
+    }
+
+  } else {
+    res.status(400).json({
+      success: false,
+      message: 'User not found'
+    });
+  }
+
+});
+
+
 app.listen(port, (err) => {
   if (!err) {
     console.log(`Server is running on port: ` + port);
