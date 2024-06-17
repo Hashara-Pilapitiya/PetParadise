@@ -16,6 +16,20 @@ const AnimalList = () => {
     fetchInfo();
   }, []);
 
+  const removeAnimal = async (id) => {
+    await fetch('http://localhost:4000/removeanimal', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: id,
+      })
+    })
+    await fetchInfo();
+  }
+
   return (
 
     <div className='animallist'>
@@ -40,7 +54,7 @@ const AnimalList = () => {
               <p className='name'>{animal.name}</p>
               <p className='age'>{animal.age}</p>
               <p className='price'>$ {animal.price}</p>
-              <ImCross className='listanimal-remove-icon' />
+              <ImCross onClick={() => {removeAnimal(animal.id)}} className='listanimal-remove-icon' />
           </div>
 
           <hr />

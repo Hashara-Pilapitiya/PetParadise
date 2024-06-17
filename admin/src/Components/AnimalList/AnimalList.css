@@ -64,6 +64,7 @@
 }
 
 .listanimal-remove-icon {
+    cursor: pointer;
     margin-left: -20px;
 }
 
