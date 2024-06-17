@@ -1,0 +1,82 @@
+.addanimal {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 50px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
+
+.addanimal-itemfield {
+    width: 100%;
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.addanimal-itemfield input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.addanimal-itemfield-price {
+    display: flex;
+    gap: 20px;
+}
+
+.add-animal-selector {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.addanimal-thumbnail-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.addanimal-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.addanimal-btn:hover {
+    background-color: var(--color-white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+
+
+
+
+
+@media(max-width: 800px) {
+    .addanimal {
+        width: auto;
+        padding: 30px;
+        margin: 20px;
+    }
+}

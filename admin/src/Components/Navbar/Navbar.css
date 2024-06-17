@@ -3,6 +3,7 @@
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
+    background: var(--color-white);
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
