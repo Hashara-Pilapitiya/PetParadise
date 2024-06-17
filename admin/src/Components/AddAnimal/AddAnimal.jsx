@@ -4,32 +4,88 @@ import Upload from '../../Assets/upload.png';
 
 const AddAnimal = () => {
 
+    const [image, setImage] = React.useState(false);
+
+    const [animalDetails, setAnimalDetails] = React.useState({  
+        name: '',
+        age: '',
+        price: '',
+        category: 'Dogs',
+        image: ''
+    });
+
+    const handleImage = (e) => {
+       setImage(e.target.files[0]);
+    }
+
+    const changeHandler = (e) => {
+        setAnimalDetails({...animalDetails, [e.target.name]: e.target.value});
+    }
+
+    const add_Animal = async () => {
+        console.log(animalDetails);
+
+        let responseData;
+        let animal = animalDetails;
+
+        const formData = new FormData();
+        formData.append('animal', image);
+
+        await fetch('http://localhost:4000/upload', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+            },
+            body: formData    
+        }).then((res) => res.json()).then((data) => {responseData = data;});
+
+        if(responseData.success) {
+            animal.image = responseData.image_url;
+
+            console.log(animal);
+
+            await fetch('http://localhost:4000/addanimal', {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(animal)
+            }).then((res) => res.json()).then((data) => {
+                data.success ? alert('Animal Added Successfully') : alert('Failed to Add Animal');
+            });
+        }
+
+
+    };
+
   return (
 
     <div className='addanimal'>
 
         <div className="addanimal-itemfield">
             <p>Animal Name</p>
-            <input type="text" name='name' placeholder='Type Here...' />
+            <input value={animalDetails.name} onChange={changeHandler} type="text" name='name' placeholder='Type Here...' />
         </div>
 
         <div className='addanimal-itemfield-price'>
             <div className="addanimal-itemfield">
                 <p>Age</p>
-                <input type="text" name='price' placeholder='Type Here...' />
+                <input value={animalDetails.age} onChange={changeHandler}
+                type="text" name='age' placeholder='Type Here...' />
             </div>
             
 
             <div className="addanimal-itemfield">
                 <p>Price</p>
-                <input type="text" name='price' placeholder='Type Here...' />
+                <input value={animalDetails.price} onChange={changeHandler} type="text" name='price' placeholder='Type Here...' />
             </div>
         </div>
         
 
         <div className="addanimal-itemfield">
             <p>Animal Category</p>
-            <select name='category' className='add-animal-selector'>
+            <select value={animalDetails.category} onChange={changeHandler} name='category' className='add-animal-selector'>
                 <option value='mammal'>Mammals</option>
                 <option value='bird'>Birds</option>
                 <option value='reptile'>Reptiles</option>
@@ -42,12 +98,12 @@ const AddAnimal = () => {
         <div className="addanimal-itemfield">
             <p>Image</p>
             <label htmlFor='file-input'>
-                <img src={Upload} className='addanimal-thumbnail-img' alt='thumbnail' />
+                <img src={image ? URL.createObjectURL(image) : Upload} className='addanimal-thumbnail-img' alt='thumbnail' />
             </label>
-            <input type='file' id='file-input' name='image' hidden />
+            <input onChange={handleImage} type='file' id='file-input' name='image' hidden />
         </div>
 
-        <button className='addanimal-btn'>Add Animal</button>
+        <button onClick={() => {add_Animal()}} className='addanimal-btn'>Add Animal</button>
 
     </div>
 
