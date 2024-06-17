@@ -12,6 +12,8 @@ const AnimalCard = (props) => {
         <div className='animal-info'>
           <p><span>Age: </span>{props.age} <span>Years</span></p>
           <p><span>Price: $</span>{props.price}</p>
+
+          console.log(props.id);
         </div>
 
         

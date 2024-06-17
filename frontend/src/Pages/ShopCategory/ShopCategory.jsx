@@ -62,26 +62,37 @@ const ShopCategory = (props) => {
 
     console.log(all_animals);
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            const res = await fetch("http://localhost:4000/allanimals");
+  
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       try {
+    //         const res = await fetch("http://localhost:4000/allanimals");
     
-            const result = await res.json();
-            setAllAnimals(result.data);
+    //         const result = await res.json();
+    //         setAllAnimals(result.data);
     
-            if (!res.ok) {
-              toast.error(result.message);
-            }
+    //         if (!res.ok) {
+    //           toast.error(result.message);
+    //         }
     
             
-          } catch (error) {
-            toast.error(error.message);
-          }
-        };
+    //       } catch (error) {
+    //         toast.error(error.message);
+    //       }
+    //     };
     
-        fetchData();
-      }, []);
+    //     fetchData();
+    //   }, []);
+    useEffect(() => {
+      fetch('http://localhost:4000/allanimals')
+      .then((res) => res.json())
+      .then((data) => setAllAnimals(data));
+
+      
+  }, []);
+
+  console.log(all_animals);
 
       return (
         <div className='shop-catrgory'>
@@ -102,7 +113,7 @@ const ShopCategory = (props) => {
                 return <AnimalCard key={index} id={animal.id} name={animal.name} image={animal.image} age={animal.age} price={animal.price}/>
               }
               else {
-                return ('wwwwwwwww');
+                return (null);
               }
             })}
           </div>

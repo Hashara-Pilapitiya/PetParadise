@@ -28,9 +28,9 @@ function App() {
           <Route path="/" element={<Shop />} />
           <Route path="/dogs" element={<ShopCategory banner={dog_banner} category='Dogs' />} />
           <Route path="/cats" element={<ShopCategory banner={cat_banner} category='Cats' />} />
-          <Route path="/fish" element={<ShopCategory banner={fish_banner} category='Fish' />} />
+          <Route path="/fish" element={<ShopCategory banner={fish_banner} category='Fishes' />} />
           <Route path="/birds" element={<ShopCategory banner={bird_banner} category='Birds' />} />
-          <Route path="/mammals" element={<ShopCategory banner={mammal_banner} category='Small Mammals' />} />
+          <Route path="/mammals" element={<ShopCategory banner={mammal_banner} category='Mammals' />} />
           <Route path="/reptilia" element={<ShopCategory banner={reptile_banner} category='Reptiles' />} /> 
           <Route path='/animal' element={<Animal /> } >
             <Route path=':animalId' element={<Animal />} />

@@ -44,8 +44,7 @@ const Navbar = () => {
                     <li onClick={() => {setMenu('birds')}}><Link to='/birds'>Birds{menu === 'birds' ? <hr /> : <></>}</Link></li>
                     <li onClick={() => {setMenu('mammals')}}><Link to='/mammals'>Small Mammals{menu === 'mammals' ? <hr /> : <></>}</Link></li>
                     <li onClick={() => {setMenu('reptilia')}}><Link to='/reptilia'>Reptilia{menu === 'reptilia' ? <hr /> : <></>}</Link></li>
-
-                </ul>   */}
+                </ul>    */}
 
                 <ul>
 
@@ -59,11 +58,11 @@ const Navbar = () => {
                     <li onClick={() => {setMenu('fish')}}><Link to='/fish'>Fish{menu === 'fish' ? <hr /> : <></>}</Link></li>
                     <li onClick={() => {setMenu('birds')}}><Link to='/birds'>Birds{menu === 'birds' ? <hr /> : <></>}</Link></li>
                     <li onClick={() => {setMenu('mammals')}}><Link to='/mammals'>Mammals{menu === 'mammals' ? <hr /> : <></>}</Link></li>
-                    <li onClick={() => {setMenu('reptilia')}}><Link to='/reptilia'>Reptilia{menu === 'reptilia' ? <hr /> : <></>}</Link></li> 
+                    <li onClick={() => {setMenu('reptilia')}}><Link to='/reptilia'>Reptiles{menu === 'reptilia' ? <hr /> : <></>}</Link></li> 
                 
                     </ul> 
                 </div> } 
-                </li> 
+                </li>  
                 <li onClick={() => {setMenu('about')}}><Link to='/about'>About{menu === 'about' ? <hr /> : <></>}</Link></li>
                 <li onClick={() => {setMenu('contact')}}><Link to='/contact'>Contact{menu === 'contact' ? <hr /> : <></>}</Link></li>
                 </ul>
