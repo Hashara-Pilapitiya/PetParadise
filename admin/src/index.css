@@ -7,3 +7,15 @@ body {
   padding: 0;
   height: 100vh;
 }
+
+:root {
+  --primary-color: rgba(0,212,255,1);
+  --secondary-color: blue;
+  --color-white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
