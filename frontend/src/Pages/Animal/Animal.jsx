@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ShopContext } from '../../Context/ShopContext';
 import { useParams } from 'react-router-dom';
 import Breadcrum from '../../Components/Breadcrums/Breadcrum';
@@ -9,6 +9,9 @@ const Animal = () => {
 
   const { all_animals } = useContext(ShopContext);
 
+
+
+
   const { animalId } = useParams();
 
   const animal = all_animals.find((animal) => animal.id === Number(animalId));
@@ -17,7 +20,7 @@ const Animal = () => {
 
     <div>
 
-      <Breadcrum animal={animal} />
+      <Breadcrum  animal={animal} />
 
       <AnimalDisplay animal={animal} />
 

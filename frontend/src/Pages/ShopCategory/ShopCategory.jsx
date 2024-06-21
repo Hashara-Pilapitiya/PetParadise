@@ -60,8 +60,6 @@ const ShopCategory = (props) => {
 
     const [all_animals, setAllAnimals] = useState([]);
 
-    console.log(all_animals);
-
   
 
     // useEffect(() => {
@@ -91,8 +89,6 @@ const ShopCategory = (props) => {
 
       
   }, []);
-
-  console.log(all_animals);
 
       return (
         <div className='shop-catrgory'>
@@ -125,5 +121,5 @@ const ShopCategory = (props) => {
   )
 }
 
-export default ShopCategory;
+export default ShopCategory;
     
