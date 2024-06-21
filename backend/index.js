@@ -305,6 +305,117 @@ app.get('/popular', async (req, res) => {
 
 
 
+
+
+
+
+
+
+
+
+
+// Create middleware to fetch user
+const fetchUser = async(req, res, next) => {
+  const token = req.header('auth-token');
+
+  if (!token) {
+    res.status(401).json({
+      success: false,
+      message: 'Invalid token'
+    });
+  }
+
+  try {
+    const decoded = jwt.verify(token, 'secret_petparadise');
+    req.user = decoded.user;
+    next();
+  } catch (e) {
+    res.status(401).json({
+      success: false,
+      message: 'Invalid token'
+    });
+  }
+};
+
+
+
+
+
+
+
+
+
+
+// Adding a new animal to the cart
+app.post('/addtocart', fetchUser, async (req, res) => {
+  
+  let user = await Users.findOne({ _id: req.user.id });
+  let cart = user.cartData;
+  let animalID = req.body.id;
+
+  cart[animalID] = cart[animalID] + 1;
+
+  await Users.findOneAndUpdate({ _id: req.user.id }, { cartData: cart });
+
+  res.json({
+    success: true,
+    message: 'Animal added to cart'
+  });
+
+});
+
+
+
+
+
+
+
+
+
+// Remove an animal from the cart
+app.post('/removefromcart', fetchUser, async (req, res) => {
+  
+  let user = await Users.findOne({ _id: req.user.id });
+  let cart = user.cartData;
+  let animalID = req.body.id;
+
+  if (cart[animalID] > 0) {
+    cart[animalID] = cart[animalID] - 1;
+  }
+
+  await Users.findOneAndUpdate({ _id: req.user.id }, { cartData: cart });
+
+  res.json({
+    success: true,
+    message: 'Animal removed from cart'
+  });
+
+}
+
+);
+
+
+
+
+
+
+
+
+
+// Get total cart data
+app.post('/gettotalcartdata', fetchUser, async (req, res) => {
+  
+  let user = await Users.findOne({ _id: req.user.id });
+
+  res.json(user.cartData);
+
+});
+
+
+
+
+
+
 app.listen(port, (err) => {
   if (!err) {
     console.log(`Server is running on port: ` + port);
