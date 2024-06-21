@@ -285,6 +285,26 @@ app.post('/login', async (req, res) => {
 });
 
 
+
+
+
+
+
+
+
+
+
+// Create a new popular animal
+app.get('/popular', async (req, res) => {
+  const animals = await Animal.find({});
+  let popular = animals.slice(0, -35);
+  res.json(popular);
+});
+
+
+
+
+
 app.listen(port, (err) => {
   if (!err) {
     console.log(`Server is running on port: ` + port);
