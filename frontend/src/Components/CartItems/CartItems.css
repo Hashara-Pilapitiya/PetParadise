@@ -44,10 +44,10 @@
 }
 
 .cartitems-format .remove-icon{
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
-    margin-left: 50px;
+    margin-left: 55px;
 }
 
 .cartitems-format .remove-icon:hover {
