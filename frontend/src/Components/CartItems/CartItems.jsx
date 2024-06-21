@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './CartItems.css';
 import { ShopContext } from '../../Context/ShopContext';
 import { ImCross } from "react-icons/im";
+import { toast } from "react-toastify";
 
 const CartItems = () => {
 
-    const {getTotalCartAmount, all_animals, cart, removeFromCart } = React.useContext(ShopContext);
+    const [all_animals, setAll_Animals] = useState([]);
+
+    const {getTotalCartAmount, cart, removeFromCart } = React.useContext(ShopContext);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const result = await fetch('http://localhost:4000/allanimals');
+            const data = await result.json();
+    
+            if (!result.ok) {
+              throw new Error("An error occurred");
+            }
+            setAll_Animals(data);
+          } catch (error) {
+            toast.error("Error loading animals");
+            console.error("Error fetching data:", error);
+          }
+        };
+        fetchData();
+      }, []);
+
+    console.log(all_animals);
 
   return (
 

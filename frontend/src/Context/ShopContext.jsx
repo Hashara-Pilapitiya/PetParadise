@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-export const ShopContext = React.createContext(null);
+export const ShopContext = React.createContext({});
 
 const getDefaultCart = () => {
     let cart = {};
@@ -25,7 +25,7 @@ const ShopContextProvider = (props) => {
         .then((data) => setAll_Animals(data));
 
         
-    }, []);
+     }, []);
 
 
     const addToCart = (animalID) => {

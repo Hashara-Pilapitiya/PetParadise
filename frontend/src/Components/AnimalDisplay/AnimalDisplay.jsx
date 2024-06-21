@@ -7,6 +7,7 @@ const AnimalDisplay = (props) => {
 
     const { animal } = props;
 
+
     const { addToCart } = React.useContext(ShopContext);
 
   return (
